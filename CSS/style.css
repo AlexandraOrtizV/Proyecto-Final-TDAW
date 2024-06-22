@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: 'coolvetica';
+    src: url('fonts/coolvetica condensed rg.otf') format('truetype');    
+}
+
 
 :root{
     --primary-color: #6298B5;
@@ -22,11 +27,154 @@ html{
 
 .container-hero{
     background-color: var(--background-color);
+
 }
 
 .hero{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 2rem 0;
 }
+
+/*              ENCABEZADO                */
+.customers-support{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.customers-support i{   
+    font-size: 5rem;
+}
+
+.content-customer-support{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.logo{    
+    width : 80%;
+    height : auto;
+}
+
+.container-user{
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+/* .user{
+    width:"50";
+    height:"50"
+} */
+
+.content-shoppbag{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 50%; /* Mueve el elemento hacia arriba desde el fondo en un 50% de su altura */
+    transform: translateY(30%);
+
+}
+
+/*              NAVBAR          */
+.container.navbar{
+/*     background-color: #89b6cf; */
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;    
+}
+
+.navbar .fa-bars{
+    display: none;
+}
+
+.menu{
+    display: flex;
+    gap: 2rem;
+}
+
+.menu li{
+    list-style: none;
+    font-family: 'coolvetica';
+    font-size: 20px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #000;
+    font-size: 50;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+}   
+
+.menu a::after{
+    content: '';
+    width: 1.5rem;
+    height: 1px;
+    background-color: #008080; 
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.menu a:hover::after{
+    opacity: 1;
+}
+
+.menu a:hover{
+    color: #008080;
+}
+
+.search-form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 2px solid #000;
+    border-radius: 2rem;
+    background-color: #fff;
+    height: 4.4rem;
+    overflow: hidden;
+}
+
+.search-form input{
+    outline: none;
+    font-family: inherit;
+    border: none;
+    width: 25rem;
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    color: #777;
+    cursor:pointer;
+}
+
+.search-form input::-webkit-search-cancel-button{
+    appearance: none;
+}
+
+.search-form .btn-search{
+    border: none;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 1rem;
+}
+
