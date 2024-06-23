@@ -123,7 +123,7 @@ html{
 .menu li{
     list-style: none;
     font-family: 'coolvetica';
-    font-size: 20px;
+    font-size: 28px;
 }
 
 .resto{
@@ -215,7 +215,7 @@ html{
 }
 
 
-/*          Media queries 768px  - tablet       */
+/*  Media queries   1023px - 768px    :   tablet       */
 @media(max-width: 768px){
 
     html{
@@ -243,7 +243,8 @@ html{
     .menu{
         opacity: 0;
         visibility: hidden;
-
+        
+        font-size: 20px;
         display : flex;
         gap: 1rem;
         position: absolute;
@@ -262,7 +263,7 @@ html{
 }
 
 
-/*          Media queries 468px   -  celular    */
+/*  Media queries   767px - 468px   :   celular     */
 @media(max-width: 468px){
     .user{
         width: 30px;
@@ -272,6 +273,8 @@ html{
     .customers-support i{   
         font-size: 3rem;
     }
-    
 
+    .menu li{
+        font-size: 15px;
+    } 
 }
