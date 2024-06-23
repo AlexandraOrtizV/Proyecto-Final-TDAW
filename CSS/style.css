@@ -71,11 +71,6 @@ html{
     cursor: pointer;
 }
 
-/* .user{
-    width:"50";
-    height:"50"
-} */
-
 .content-shoppbag{
     display: flex;
     flex-direction: column;
@@ -85,7 +80,8 @@ html{
 
 }
 
-/*              NAVBAR          */
+/*                  NAVBAR               */
+
 .container.navbar{
 /*     background-color: #89b6cf; */
 }
@@ -97,8 +93,26 @@ html{
     padding: 1rem 0;    
 }
 
-.navbar .fa-bars{
+.hamburguesa{
     display: none;
+    border: none; 
+    background-color: #fff;
+    height: 100%;
+    padding: 1rem;
+}
+
+.hamburguesa i{
+    font-size: 2rem;
+}
+
+.btn-close{
+    border: none;
+    background-color: #fff;
+    display: flex;
+    align-items:end;
+    height: 100%;
+    padding: 1rem;
+    display: none; 
 }
 
 .menu{
@@ -112,7 +126,7 @@ html{
     font-size: 20px;
 }
 
-.menu a{
+.resto{
     text-decoration: none;
     color: #000;
     font-size: 50;
@@ -120,6 +134,15 @@ html{
     text-transform: uppercase;
     position: relative;
 }   
+
+.inicio{
+    text-decoration: none;
+    color: #008080;
+    font-size: 50;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+}
 
 .menu a::after{
     content: '';
@@ -140,6 +163,10 @@ html{
 
 .menu a:hover{
     color: #008080;
+}
+
+.inicio{
+    color: #008080; 
 }
 
 .search-form{
@@ -178,3 +205,73 @@ html{
     padding: 1rem;
 }
 
+/*                    BANNER                              */
+.banner{
+    background-image: url(../imgs/banner.jpeg);
+    height: 60rem;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+/*          Media queries 768px  - tablet       */
+@media(max-width: 768px){
+
+    html{
+        font-size: 55%;
+    }
+    .hero{
+        padding: 2rem;
+    }
+    .content-customer-support{
+        display: none;
+    }
+    .content-shoppbag{
+        display: none;
+    }
+    .user{
+        width: 35px;
+        height:35px;
+    }
+    .navbar{
+        padding: 1rem 2rem;
+    }
+    .hamburguesa{
+        display: block;
+    }    
+    .menu{
+        opacity: 0;
+        visibility: hidden;
+
+        display : flex;
+        gap: 1rem;
+        position: absolute;
+        top: 15%;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 2rem;
+    }
+    .menu.visible{
+        opacity: 1;
+        visibility: visible;
+    }  
+    .btn-close{
+        display: block;
+    }
+}
+
+
+/*          Media queries 468px   -  celular    */
+@media(max-width: 468px){
+    .user{
+        width: 30px;
+        height:30px;
+    }
+
+    .customers-support i{   
+        font-size: 3rem;
+    }
+    
+
+}
