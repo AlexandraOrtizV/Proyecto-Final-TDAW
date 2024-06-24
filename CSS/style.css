@@ -82,9 +82,9 @@ html{
 
 /*                  NAVBAR               */
 
-.container.navbar{
-/*     background-color: #89b6cf; */
-}
+/* .container.navbar{
+    background-color: #89b6cf; 
+} */
 
 .navbar{
     display: flex;

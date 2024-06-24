@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body{
@@ -103,7 +105,8 @@ main{
     width: 100%;
     margin-top: 20px;
     padding: 10px;
-    border: none;
+    border: 3px solid transparent;
+    border-radius: 4px;
     background: #f2f2f2;
     font-size: 16px;
     outline: none;
@@ -129,6 +132,57 @@ main{
     display: none;
 }
 
+/*          Validacion/ Sanitización de datos           */
+.grupo-input{
+    position: relative;
+}
+
+.form-input:focus{
+    border: 3px solid #0075ff;
+    outline: "none";
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.4);
+}
+
+.form-input-error{
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.form-input-error-activo{
+    display: block;    
+}
+
+.form-val-edo{
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.grupo-input-correcto .form-val-edo{
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.grupo-input-incorrecto .form-val-edo{
+    color: #bb2929;
+    opacity: 1;
+}
+
+.grupo-input-incorrecto .form-input{
+    border: 3px solid #bb2929;
+}
+
+.form-error{
+    display: none;
+}
+
+.form-error-active{
+    display: block;
+}
 
 /*Vista responsiva*/
 @media screen and (max-width: 850px){
